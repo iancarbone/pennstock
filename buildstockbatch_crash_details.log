@@ -1,0 +1,544 @@
+
+####################
+Traceback (most recent call last):
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\utils.py", line 120, in run_with_error_capture
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\local.py", line 410, in main
+    LocalBatch.validate_project(args.project_filename)
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\local.py", line 121, in validate_project
+    super(cls, cls).validate_project(project_file)
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\base.py", line 272, in validate_project
+    assert cls.validate_project_schema(project_file)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\base.py", line 382, in validate_project_schema
+    return yamale.validate(schema, data, strict=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ianca\anaconda3\envs\build_env\Lib\site-packages\yamale\yamale.py", line 45, in validate
+    raise YamaleError(results)
+yamale.yamale_error.YamaleError: Error validating data '.\project_PAsolar\PAsolar_upgrades.yml' with schema 'C:\Users\ianca\buildstockbatch\buildstockbatch\schemas\v0.3.yaml'
+	output_directory: 'PAsolar_upgrades' is not a regex match.
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\utils.py, module run_with_error_capture line: 120 
+Local Variables: 'args':()
+'kwargs':{}
+'f':<_io.TextIOWrapper name='buildstockbatch_crash_details.log' mode='a' encoding='cp1252'>
+'text':'
+####################
+'
+'func':<function main at 0x00000137A29342C0>
+'output_file':'buildstockbatch_crash_details.log'
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\local.py, module main line: 410 
+Local Variables: 'parser':ArgumentParser(prog='buildstock_local', usage=None, description=None, formatter_class=<class 'argparse.HelpFormatter'>, conflict_handler='error', add_help=True)
+'group':<argparse._MutuallyExclusiveGroup object at 0x00000137A27C0AA0>
+'args':Namespace(project_filename='.\\project_PAsolar\\PAsolar_upgrades.yml', j=None, measures_only=False, postprocessonly=False, uploadonly=False, validateonly=False, samplingonly=False)
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\local.py, module validate_project line: 121 
+Local Variables: 'cls':<class 'buildstockbatch.local.LocalBatch'>
+'project_file':'.\project_PAsolar\PAsolar_upgrades.yml'
+'__class__':<class 'buildstockbatch.local.LocalBatch'>
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\base.py, module validate_project line: 272 
+Local Variables: 'cls':<class 'buildstockbatch.local.LocalBatch'>
+'project_file':'.\project_PAsolar\PAsolar_upgrades.yml'
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\base.py, module validate_project_schema line: 382 
+Local Variables: 'project_file':'.\project_PAsolar\PAsolar_upgrades.yml'
+'cfg':{'schema_version': '0.3','os_version': '3.8.0','os_sha': 'f953b6fcaf','buildstock_directory': 'C:\Users\ianca\resstock','project_directory': 'project_PAsolar','output_directory': 'PAsolar_upgrades','weather_files_url': 'https://data.nrel.gov/system/files/156/Buildstock_TMY3_FIPS-1678817889.zip','sampler': {'type': 'residential_quota_downselect','args': {'n_datapoints': '10','logic': ['State|PA'],'resample': True}},'workflow_generator': {'type': 'residential_hpxml','args': {'build_existing_model': {'simulation_control_timestep': '60','simulation_control_run_period_begin_month': '1','simulation_control_run_period_begin_day_of_month': '1','simulation_control_run_period_end_month': '12','simulation_control_run_period_end_day_of_month': '31','simulation_control_run_period_calendar_year': '2007'},'emissions': [{'scenario_name': 'LRMER_MidCase_15','type': 'CO2e','elec_folder': 'data/emissions/cambium/2022/LRMER_MidCase_15'}],'utility_bills': [{'scenario_name': 'Bills'}],'simulation_output_report': {'timeseries_frequency': 'hourly','include_timeseries_total_consumptions': True,'include_timeseries_fuel_consumptions': True,'include_timeseries_end_use_consumptions': True,'include_timeseries_emissions': True,'include_timeseries_emission_fuels': True,'include_timeseries_emission_end_uses': True,'include_timeseries_hot_water_uses': True,'include_timeseries_total_loads': True,'include_timeseries_component_loads': True,'include_timeseries_unmet_hours': True,'include_timeseries_zone_temperatures': True,'include_timeseries_airflows': True,'include_timeseries_weather': True,'include_timeseries_resilience': True},'reporting_measures': [{'measure_dir_name': 'QOIReport'}],'server_directory_cleanup': {'retain_in_idf': False,'retain_schedules_csv': False}}},'baseline': {'n_buildings_represented': '5742828'},'upgrades': [{'upgrade_name': 'PV','options': [{'option': 'Has PV|Yes'}]}]}
+'schema_version':'0.3'
+'version_schema':'C:\Users\ianca\buildstockbatch\buildstockbatch\schemas\v0.3.yaml'
+'schema':<yamale.schema.schema.Schema object at 0x000001378C718B60>
+'data':[({'schema_version': '0.3','os_version': '3.8.0','os_sha': 'f953b6fcaf','buildstock_directory': '../','project_directory': 'project_PAsolar','output_directory': 'PAsolar_upgrades','weather_files_url': 'https://data.nrel.gov/system/files/156/Buildstock_TMY3_FIPS-1678817889.zip','sampler': {'type': 'residential_quota_downselect','args': {'n_datapoints': '10','logic': ['State|PA'],'resample': True}},'workflow_generator': {'type': 'residential_hpxml','args': {'build_existing_model': {'simulation_control_timestep': '60','simulation_control_run_period_begin_month': '1','simulation_control_run_period_begin_day_of_month': '1','simulation_control_run_period_end_month': '12','simulation_control_run_period_end_day_of_month': '31','simulation_control_run_period_calendar_year': '2007'},'emissions': [{'scenario_name': 'LRMER_MidCase_15','type': 'CO2e','elec_folder': 'data/emissions/cambium/2022/LRMER_MidCase_15'}],'utility_bills': [{'scenario_name': 'Bills'}],'simulation_output_report': {'timeseries_frequency': 'hourly','include_timeseries_total_consumptions': True,'include_timeseries_fuel_consumptions': True,'include_timeseries_end_use_consumptions': True,'include_timeseries_emissions': True,'include_timeseries_emission_fuels': True,'include_timeseries_emission_end_uses': True,'include_timeseries_hot_water_uses': True,'include_timeseries_total_loads': True,'include_timeseries_component_loads': True,'include_timeseries_unmet_hours': True,'include_timeseries_zone_temperatures': True,'include_timeseries_airflows': True,'include_timeseries_weather': True,'include_timeseries_resilience': True},'reporting_measures': [{'measure_dir_name': 'QOIReport'}],'server_directory_cleanup': {'retain_in_idf': False,'retain_schedules_csv': False}}},'baseline': {'n_buildings_represented': '5742828'},'upgrades': [{'upgrade_name': 'PV','options': [{'option': 'Has PV|Yes'}]}]},'.\project_PAsolar\PAsolar_upgrades.yml')]
+
+In file: C:\Users\ianca\anaconda3\envs\build_env\Lib\site-packages\yamale\yamale.py, module validate line: 45 
+Local Variables: 'schema':<yamale.schema.schema.Schema object at 0x000001378C718B60>
+'data':[({'schema_version': '0.3','os_version': '3.8.0','os_sha': 'f953b6fcaf','buildstock_directory': '../','project_directory': 'project_PAsolar','output_directory': 'PAsolar_upgrades','weather_files_url': 'https://data.nrel.gov/system/files/156/Buildstock_TMY3_FIPS-1678817889.zip','sampler': {'type': 'residential_quota_downselect','args': {'n_datapoints': '10','logic': ['State|PA'],'resample': True}},'workflow_generator': {'type': 'residential_hpxml','args': {'build_existing_model': {'simulation_control_timestep': '60','simulation_control_run_period_begin_month': '1','simulation_control_run_period_begin_day_of_month': '1','simulation_control_run_period_end_month': '12','simulation_control_run_period_end_day_of_month': '31','simulation_control_run_period_calendar_year': '2007'},'emissions': [{'scenario_name': 'LRMER_MidCase_15','type': 'CO2e','elec_folder': 'data/emissions/cambium/2022/LRMER_MidCase_15'}],'utility_bills': [{'scenario_name': 'Bills'}],'simulation_output_report': {'timeseries_frequency': 'hourly','include_timeseries_total_consumptions': True,'include_timeseries_fuel_consumptions': True,'include_timeseries_end_use_consumptions': True,'include_timeseries_emissions': True,'include_timeseries_emission_fuels': True,'include_timeseries_emission_end_uses': True,'include_timeseries_hot_water_uses': True,'include_timeseries_total_loads': True,'include_timeseries_component_loads': True,'include_timeseries_unmet_hours': True,'include_timeseries_zone_temperatures': True,'include_timeseries_airflows': True,'include_timeseries_weather': True,'include_timeseries_resilience': True},'reporting_measures': [{'measure_dir_name': 'QOIReport'}],'server_directory_cleanup': {'retain_in_idf': False,'retain_schedules_csv': False}}},'baseline': {'n_buildings_represented': '5742828'},'upgrades': [{'upgrade_name': 'PV','options': [{'option': 'Has PV|Yes'}]}]},'.\project_PAsolar\PAsolar_upgrades.yml')]
+'strict':True
+'_raise_error':True
+'results':[Error validating data '.\project_PAsolar\PAsolar_upgrades.yml' with schema 'C:\Users\ianca\buildstockbatch\buildstockbatch\schemas\v0.3.yaml'
+	output_directory: 'PAsolar_upgrades' is not a regex match.]
+'is_valid':False
+'d':{'schema_version': '0.3','os_version': '3.8.0','os_sha': 'f953b6fcaf','buildstock_directory': '../','project_directory': 'project_PAsolar','output_directory': 'PAsolar_upgrades','weather_files_url': 'https://data.nrel.gov/system/files/156/Buildstock_TMY3_FIPS-1678817889.zip','sampler': {'type': 'residential_quota_downselect','args': {'n_datapoints': '10','logic': ['State|PA'],'resample': True}},'workflow_generator': {'type': 'residential_hpxml','args': {'build_existing_model': {'simulation_control_timestep': '60','simulation_control_run_period_begin_month': '1','simulation_control_run_period_begin_day_of_month': '1','simulation_control_run_period_end_month': '12','simulation_control_run_period_end_day_of_month': '31','simulation_control_run_period_calendar_year': '2007'},'emissions': [{'scenario_name': 'LRMER_MidCase_15','type': 'CO2e','elec_folder': 'data/emissions/cambium/2022/LRMER_MidCase_15'}],'utility_bills': [{'scenario_name': 'Bills'}],'simulation_output_report': {'timeseries_frequency': 'hourly','include_timeseries_total_consumptions': True,'include_timeseries_fuel_consumptions': True,'include_timeseries_end_use_consumptions': True,'include_timeseries_emissions': True,'include_timeseries_emission_fuels': True,'include_timeseries_emission_end_uses': True,'include_timeseries_hot_water_uses': True,'include_timeseries_total_loads': True,'include_timeseries_component_loads': True,'include_timeseries_unmet_hours': True,'include_timeseries_zone_temperatures': True,'include_timeseries_airflows': True,'include_timeseries_weather': True,'include_timeseries_resilience': True},'reporting_measures': [{'measure_dir_name': 'QOIReport'}],'server_directory_cleanup': {'retain_in_idf': False,'retain_schedules_csv': False}}},'baseline': {'n_buildings_represented': '5742828'},'upgrades': [{'upgrade_name': 'PV','options': [{'option': 'Has PV|Yes'}]}]}
+'path':'.\project_PAsolar\PAsolar_upgrades.yml'
+'result':Error validating data '.\project_PAsolar\PAsolar_upgrades.yml' with schema 'C:\Users\ianca\buildstockbatch\buildstockbatch\schemas\v0.3.yaml'
+	output_directory: 'PAsolar_upgrades' is not a regex match.
+
+####################
+Traceback (most recent call last):
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\utils.py", line 120, in run_with_error_capture
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\local.py", line 410, in main
+    LocalBatch.validate_project(args.project_filename)
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\local.py", line 121, in validate_project
+    super(cls, cls).validate_project(project_file)
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\base.py", line 272, in validate_project
+    assert cls.validate_project_schema(project_file)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\base.py", line 382, in validate_project_schema
+    return yamale.validate(schema, data, strict=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ianca\anaconda3\envs\build_env\Lib\site-packages\yamale\yamale.py", line 45, in validate
+    raise YamaleError(results)
+yamale.yamale_error.YamaleError: Error validating data '.\project_PAsolar\PAsolar_upgrades.yml' with schema 'C:\Users\ianca\buildstockbatch\buildstockbatch\schemas\v0.3.yaml'
+	output_directory: 'PAsolar_upgrades' is not a regex match.
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\utils.py, module run_with_error_capture line: 120 
+Local Variables: 'args':()
+'kwargs':{}
+'f':<_io.TextIOWrapper name='buildstockbatch_crash_details.log' mode='a' encoding='cp1252'>
+'text':'
+####################
+'
+'func':<function main at 0x000001FAD8C542C0>
+'output_file':'buildstockbatch_crash_details.log'
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\local.py, module main line: 410 
+Local Variables: 'parser':ArgumentParser(prog='buildstock_local', usage=None, description=None, formatter_class=<class 'argparse.HelpFormatter'>, conflict_handler='error', add_help=True)
+'group':<argparse._MutuallyExclusiveGroup object at 0x000001FAD8AF97F0>
+'args':Namespace(project_filename='.\\project_PAsolar\\PAsolar_upgrades.yml', j=None, measures_only=False, postprocessonly=False, uploadonly=False, validateonly=False, samplingonly=False)
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\local.py, module validate_project line: 121 
+Local Variables: 'cls':<class 'buildstockbatch.local.LocalBatch'>
+'project_file':'.\project_PAsolar\PAsolar_upgrades.yml'
+'__class__':<class 'buildstockbatch.local.LocalBatch'>
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\base.py, module validate_project line: 272 
+Local Variables: 'cls':<class 'buildstockbatch.local.LocalBatch'>
+'project_file':'.\project_PAsolar\PAsolar_upgrades.yml'
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\base.py, module validate_project_schema line: 382 
+Local Variables: 'project_file':'.\project_PAsolar\PAsolar_upgrades.yml'
+'cfg':{'schema_version': '0.3','os_version': '3.8.0','os_sha': 'f953b6fcaf','buildstock_directory': 'C:\Users\ianca\resstock','project_directory': 'project_PAsolar','output_directory': 'PAsolar_upgrades','weather_files_url': 'https://data.nrel.gov/system/files/156/Buildstock_TMY3_FIPS-1678817889.zip','sampler': {'type': 'residential_quota_downselect','args': {'n_datapoints': '10','logic': ['State|PA'],'resample': True}},'workflow_generator': {'type': 'residential_hpxml','args': {'build_existing_model': {'simulation_control_timestep': '60','simulation_control_run_period_begin_month': '1','simulation_control_run_period_begin_day_of_month': '1','simulation_control_run_period_end_month': '12','simulation_control_run_period_end_day_of_month': '31','simulation_control_run_period_calendar_year': '2007'},'emissions': [{'scenario_name': 'LRMER_MidCase_15','type': 'CO2e','elec_folder': 'data/emissions/cambium/2022/LRMER_MidCase_15'}],'utility_bills': [{'scenario_name': 'Bills'}],'simulation_output_report': {'timeseries_frequency': 'hourly','include_timeseries_total_consumptions': True,'include_timeseries_fuel_consumptions': True,'include_timeseries_end_use_consumptions': True,'include_timeseries_emissions': True,'include_timeseries_emission_fuels': True,'include_timeseries_emission_end_uses': True,'include_timeseries_hot_water_uses': True,'include_timeseries_total_loads': True,'include_timeseries_component_loads': True,'include_timeseries_unmet_hours': True,'include_timeseries_zone_temperatures': True,'include_timeseries_airflows': True,'include_timeseries_weather': True,'include_timeseries_resilience': True},'reporting_measures': [{'measure_dir_name': 'QOIReport'}],'server_directory_cleanup': {'retain_in_idf': False,'retain_schedules_csv': False}}},'baseline': {'n_buildings_represented': '5742828'},'upgrades': [{'upgrade_name': 'PV','options': [{'option': 'Has PV|Yes'}]}]}
+'schema_version':'0.3'
+'version_schema':'C:\Users\ianca\buildstockbatch\buildstockbatch\schemas\v0.3.yaml'
+'schema':<yamale.schema.schema.Schema object at 0x000001FAD6B21610>
+'data':[({'schema_version': '0.3','os_version': '3.8.0','os_sha': 'f953b6fcaf','buildstock_directory': '../','project_directory': 'project_PAsolar','output_directory': 'PAsolar_upgrades','weather_files_url': 'https://data.nrel.gov/system/files/156/Buildstock_TMY3_FIPS-1678817889.zip','sampler': {'type': 'residential_quota_downselect','args': {'n_datapoints': '10','logic': ['State|PA'],'resample': True}},'workflow_generator': {'type': 'residential_hpxml','args': {'build_existing_model': {'simulation_control_timestep': '60','simulation_control_run_period_begin_month': '1','simulation_control_run_period_begin_day_of_month': '1','simulation_control_run_period_end_month': '12','simulation_control_run_period_end_day_of_month': '31','simulation_control_run_period_calendar_year': '2007'},'emissions': [{'scenario_name': 'LRMER_MidCase_15','type': 'CO2e','elec_folder': 'data/emissions/cambium/2022/LRMER_MidCase_15'}],'utility_bills': [{'scenario_name': 'Bills'}],'simulation_output_report': {'timeseries_frequency': 'hourly','include_timeseries_total_consumptions': True,'include_timeseries_fuel_consumptions': True,'include_timeseries_end_use_consumptions': True,'include_timeseries_emissions': True,'include_timeseries_emission_fuels': True,'include_timeseries_emission_end_uses': True,'include_timeseries_hot_water_uses': True,'include_timeseries_total_loads': True,'include_timeseries_component_loads': True,'include_timeseries_unmet_hours': True,'include_timeseries_zone_temperatures': True,'include_timeseries_airflows': True,'include_timeseries_weather': True,'include_timeseries_resilience': True},'reporting_measures': [{'measure_dir_name': 'QOIReport'}],'server_directory_cleanup': {'retain_in_idf': False,'retain_schedules_csv': False}}},'baseline': {'n_buildings_represented': '5742828'},'upgrades': [{'upgrade_name': 'PV','options': [{'option': 'Has PV|Yes'}]}]},'.\project_PAsolar\PAsolar_upgrades.yml')]
+
+In file: C:\Users\ianca\anaconda3\envs\build_env\Lib\site-packages\yamale\yamale.py, module validate line: 45 
+Local Variables: 'schema':<yamale.schema.schema.Schema object at 0x000001FAD6B21610>
+'data':[({'schema_version': '0.3','os_version': '3.8.0','os_sha': 'f953b6fcaf','buildstock_directory': '../','project_directory': 'project_PAsolar','output_directory': 'PAsolar_upgrades','weather_files_url': 'https://data.nrel.gov/system/files/156/Buildstock_TMY3_FIPS-1678817889.zip','sampler': {'type': 'residential_quota_downselect','args': {'n_datapoints': '10','logic': ['State|PA'],'resample': True}},'workflow_generator': {'type': 'residential_hpxml','args': {'build_existing_model': {'simulation_control_timestep': '60','simulation_control_run_period_begin_month': '1','simulation_control_run_period_begin_day_of_month': '1','simulation_control_run_period_end_month': '12','simulation_control_run_period_end_day_of_month': '31','simulation_control_run_period_calendar_year': '2007'},'emissions': [{'scenario_name': 'LRMER_MidCase_15','type': 'CO2e','elec_folder': 'data/emissions/cambium/2022/LRMER_MidCase_15'}],'utility_bills': [{'scenario_name': 'Bills'}],'simulation_output_report': {'timeseries_frequency': 'hourly','include_timeseries_total_consumptions': True,'include_timeseries_fuel_consumptions': True,'include_timeseries_end_use_consumptions': True,'include_timeseries_emissions': True,'include_timeseries_emission_fuels': True,'include_timeseries_emission_end_uses': True,'include_timeseries_hot_water_uses': True,'include_timeseries_total_loads': True,'include_timeseries_component_loads': True,'include_timeseries_unmet_hours': True,'include_timeseries_zone_temperatures': True,'include_timeseries_airflows': True,'include_timeseries_weather': True,'include_timeseries_resilience': True},'reporting_measures': [{'measure_dir_name': 'QOIReport'}],'server_directory_cleanup': {'retain_in_idf': False,'retain_schedules_csv': False}}},'baseline': {'n_buildings_represented': '5742828'},'upgrades': [{'upgrade_name': 'PV','options': [{'option': 'Has PV|Yes'}]}]},'.\project_PAsolar\PAsolar_upgrades.yml')]
+'strict':True
+'_raise_error':True
+'results':[Error validating data '.\project_PAsolar\PAsolar_upgrades.yml' with schema 'C:\Users\ianca\buildstockbatch\buildstockbatch\schemas\v0.3.yaml'
+	output_directory: 'PAsolar_upgrades' is not a regex match.]
+'is_valid':False
+'d':{'schema_version': '0.3','os_version': '3.8.0','os_sha': 'f953b6fcaf','buildstock_directory': '../','project_directory': 'project_PAsolar','output_directory': 'PAsolar_upgrades','weather_files_url': 'https://data.nrel.gov/system/files/156/Buildstock_TMY3_FIPS-1678817889.zip','sampler': {'type': 'residential_quota_downselect','args': {'n_datapoints': '10','logic': ['State|PA'],'resample': True}},'workflow_generator': {'type': 'residential_hpxml','args': {'build_existing_model': {'simulation_control_timestep': '60','simulation_control_run_period_begin_month': '1','simulation_control_run_period_begin_day_of_month': '1','simulation_control_run_period_end_month': '12','simulation_control_run_period_end_day_of_month': '31','simulation_control_run_period_calendar_year': '2007'},'emissions': [{'scenario_name': 'LRMER_MidCase_15','type': 'CO2e','elec_folder': 'data/emissions/cambium/2022/LRMER_MidCase_15'}],'utility_bills': [{'scenario_name': 'Bills'}],'simulation_output_report': {'timeseries_frequency': 'hourly','include_timeseries_total_consumptions': True,'include_timeseries_fuel_consumptions': True,'include_timeseries_end_use_consumptions': True,'include_timeseries_emissions': True,'include_timeseries_emission_fuels': True,'include_timeseries_emission_end_uses': True,'include_timeseries_hot_water_uses': True,'include_timeseries_total_loads': True,'include_timeseries_component_loads': True,'include_timeseries_unmet_hours': True,'include_timeseries_zone_temperatures': True,'include_timeseries_airflows': True,'include_timeseries_weather': True,'include_timeseries_resilience': True},'reporting_measures': [{'measure_dir_name': 'QOIReport'}],'server_directory_cleanup': {'retain_in_idf': False,'retain_schedules_csv': False}}},'baseline': {'n_buildings_represented': '5742828'},'upgrades': [{'upgrade_name': 'PV','options': [{'option': 'Has PV|Yes'}]}]}
+'path':'.\project_PAsolar\PAsolar_upgrades.yml'
+'result':Error validating data '.\project_PAsolar\PAsolar_upgrades.yml' with schema 'C:\Users\ianca\buildstockbatch\buildstockbatch\schemas\v0.3.yaml'
+	output_directory: 'PAsolar_upgrades' is not a regex match.
+
+####################
+Traceback (most recent call last):
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\utils.py", line 120, in run_with_error_capture
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\local.py", line 410, in main
+    LocalBatch.validate_project(args.project_filename)
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\local.py", line 121, in validate_project
+    super(cls, cls).validate_project(project_file)
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\base.py", line 272, in validate_project
+    assert cls.validate_project_schema(project_file)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\base.py", line 382, in validate_project_schema
+    return yamale.validate(schema, data, strict=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ianca\anaconda3\envs\build_env\Lib\site-packages\yamale\yamale.py", line 45, in validate
+    raise YamaleError(results)
+yamale.yamale_error.YamaleError: Error validating data '.\project_PAsolar\PAsolar_upgrades.yml' with schema 'C:\Users\ianca\buildstockbatch\buildstockbatch\schemas\v0.3.yaml'
+	output_directory: 'PAsolar_upgrades' is not a regex match.
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\utils.py, module run_with_error_capture line: 120 
+Local Variables: 'args':()
+'kwargs':{}
+'f':<_io.TextIOWrapper name='buildstockbatch_crash_details.log' mode='a' encoding='cp1252'>
+'text':'
+####################
+'
+'func':<function main at 0x000001EF54E642C0>
+'output_file':'buildstockbatch_crash_details.log'
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\local.py, module main line: 410 
+Local Variables: 'parser':ArgumentParser(prog='buildstock_local', usage=None, description=None, formatter_class=<class 'argparse.HelpFormatter'>, conflict_handler='error', add_help=True)
+'group':<argparse._MutuallyExclusiveGroup object at 0x000001EF54CD8AA0>
+'args':Namespace(project_filename='.\\project_PAsolar\\PAsolar_upgrades.yml', j=None, measures_only=False, postprocessonly=False, uploadonly=False, validateonly=False, samplingonly=False)
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\local.py, module validate_project line: 121 
+Local Variables: 'cls':<class 'buildstockbatch.local.LocalBatch'>
+'project_file':'.\project_PAsolar\PAsolar_upgrades.yml'
+'__class__':<class 'buildstockbatch.local.LocalBatch'>
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\base.py, module validate_project line: 272 
+Local Variables: 'cls':<class 'buildstockbatch.local.LocalBatch'>
+'project_file':'.\project_PAsolar\PAsolar_upgrades.yml'
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\base.py, module validate_project_schema line: 382 
+Local Variables: 'project_file':'.\project_PAsolar\PAsolar_upgrades.yml'
+'cfg':{'schema_version': '0.3','os_version': '3.8.0','os_sha': 'f953b6fcaf','buildstock_directory': 'C:\Users\ianca\resstock','project_directory': 'project_PAsolar','output_directory': 'PAsolar_upgrades','weather_files_url': 'https://data.nrel.gov/system/files/156/Buildstock_TMY3_FIPS-1678817889.zip','sampler': {'type': 'residential_quota_downselect','args': {'n_datapoints': '10','logic': ['State|PA'],'resample': True}},'workflow_generator': {'type': 'residential_hpxml','args': {'build_existing_model': {'simulation_control_timestep': '60','simulation_control_run_period_begin_month': '1','simulation_control_run_period_begin_day_of_month': '1','simulation_control_run_period_end_month': '12','simulation_control_run_period_end_day_of_month': '31','simulation_control_run_period_calendar_year': '2007'},'emissions': [{'scenario_name': 'LRMER_MidCase_15','type': 'CO2e','elec_folder': 'data/emissions/cambium/2022/LRMER_MidCase_15'}],'utility_bills': [{'scenario_name': 'Bills'}],'simulation_output_report': {'timeseries_frequency': 'hourly','include_timeseries_total_consumptions': True,'include_timeseries_fuel_consumptions': True,'include_timeseries_end_use_consumptions': True,'include_timeseries_emissions': True,'include_timeseries_emission_fuels': True,'include_timeseries_emission_end_uses': True,'include_timeseries_hot_water_uses': True,'include_timeseries_total_loads': True,'include_timeseries_component_loads': True,'include_timeseries_unmet_hours': True,'include_timeseries_zone_temperatures': True,'include_timeseries_airflows': True,'include_timeseries_weather': True,'include_timeseries_resilience': True},'reporting_measures': [{'measure_dir_name': 'QOIReport'}],'server_directory_cleanup': {'retain_in_idf': False,'retain_schedules_csv': False}}},'baseline': {'n_buildings_represented': '5742828'},'upgrades': [{'upgrade_name': 'PV','options': [{'option': 'Has PV|Yes','costs': [{'value': '15000.0','multiplier': 'Fixed (1)'}],'lifetime': '30'},{'option': 'PV System Size|5.0 kWDC'},{'option': 'PV Orientation|South'}]}],'eagle': {'n_jobs': '3','minutes_per_sim': '5','account': '<account you are authorized to use>','postprocessing': {'time': '20','n_workers': '1'},'sampling': {'time': '10'}}}
+'schema_version':'0.3'
+'version_schema':'C:\Users\ianca\buildstockbatch\buildstockbatch\schemas\v0.3.yaml'
+'schema':<yamale.schema.schema.Schema object at 0x000001EF54B0FA70>
+'data':[({'schema_version': '0.3','os_version': '3.8.0','os_sha': 'f953b6fcaf','buildstock_directory': '../','project_directory': 'project_PAsolar','output_directory': 'PAsolar_upgrades','weather_files_url': 'https://data.nrel.gov/system/files/156/Buildstock_TMY3_FIPS-1678817889.zip','sampler': {'type': 'residential_quota_downselect','args': {'n_datapoints': '10','logic': ['State|PA'],'resample': True}},'workflow_generator': {'type': 'residential_hpxml','args': {'build_existing_model': {'simulation_control_timestep': '60','simulation_control_run_period_begin_month': '1','simulation_control_run_period_begin_day_of_month': '1','simulation_control_run_period_end_month': '12','simulation_control_run_period_end_day_of_month': '31','simulation_control_run_period_calendar_year': '2007'},'emissions': [{'scenario_name': 'LRMER_MidCase_15','type': 'CO2e','elec_folder': 'data/emissions/cambium/2022/LRMER_MidCase_15'}],'utility_bills': [{'scenario_name': 'Bills'}],'simulation_output_report': {'timeseries_frequency': 'hourly','include_timeseries_total_consumptions': True,'include_timeseries_fuel_consumptions': True,'include_timeseries_end_use_consumptions': True,'include_timeseries_emissions': True,'include_timeseries_emission_fuels': True,'include_timeseries_emission_end_uses': True,'include_timeseries_hot_water_uses': True,'include_timeseries_total_loads': True,'include_timeseries_component_loads': True,'include_timeseries_unmet_hours': True,'include_timeseries_zone_temperatures': True,'include_timeseries_airflows': True,'include_timeseries_weather': True,'include_timeseries_resilience': True},'reporting_measures': [{'measure_dir_name': 'QOIReport'}],'server_directory_cleanup': {'retain_in_idf': False,'retain_schedules_csv': False}}},'baseline': {'n_buildings_represented': '5742828'},'upgrades': [{'upgrade_name': 'PV','options': [{'option': 'Has PV|Yes','costs': [{'value': '15000.0','multiplier': 'Fixed (1)'}],'lifetime': '30'},{'option': 'PV System Size|5.0 kWDC'},{'option': 'PV Orientation|South'}]}],'eagle': {'n_jobs': '3','minutes_per_sim': '5','account': '<account you are authorized to use>','postprocessing': {'time': '20','n_workers': '1'},'sampling': {'time': '10'}}},'.\project_PAsolar\PAsolar_upgrades.yml')]
+
+In file: C:\Users\ianca\anaconda3\envs\build_env\Lib\site-packages\yamale\yamale.py, module validate line: 45 
+Local Variables: 'schema':<yamale.schema.schema.Schema object at 0x000001EF54B0FA70>
+'data':[({'schema_version': '0.3','os_version': '3.8.0','os_sha': 'f953b6fcaf','buildstock_directory': '../','project_directory': 'project_PAsolar','output_directory': 'PAsolar_upgrades','weather_files_url': 'https://data.nrel.gov/system/files/156/Buildstock_TMY3_FIPS-1678817889.zip','sampler': {'type': 'residential_quota_downselect','args': {'n_datapoints': '10','logic': ['State|PA'],'resample': True}},'workflow_generator': {'type': 'residential_hpxml','args': {'build_existing_model': {'simulation_control_timestep': '60','simulation_control_run_period_begin_month': '1','simulation_control_run_period_begin_day_of_month': '1','simulation_control_run_period_end_month': '12','simulation_control_run_period_end_day_of_month': '31','simulation_control_run_period_calendar_year': '2007'},'emissions': [{'scenario_name': 'LRMER_MidCase_15','type': 'CO2e','elec_folder': 'data/emissions/cambium/2022/LRMER_MidCase_15'}],'utility_bills': [{'scenario_name': 'Bills'}],'simulation_output_report': {'timeseries_frequency': 'hourly','include_timeseries_total_consumptions': True,'include_timeseries_fuel_consumptions': True,'include_timeseries_end_use_consumptions': True,'include_timeseries_emissions': True,'include_timeseries_emission_fuels': True,'include_timeseries_emission_end_uses': True,'include_timeseries_hot_water_uses': True,'include_timeseries_total_loads': True,'include_timeseries_component_loads': True,'include_timeseries_unmet_hours': True,'include_timeseries_zone_temperatures': True,'include_timeseries_airflows': True,'include_timeseries_weather': True,'include_timeseries_resilience': True},'reporting_measures': [{'measure_dir_name': 'QOIReport'}],'server_directory_cleanup': {'retain_in_idf': False,'retain_schedules_csv': False}}},'baseline': {'n_buildings_represented': '5742828'},'upgrades': [{'upgrade_name': 'PV','options': [{'option': 'Has PV|Yes','costs': [{'value': '15000.0','multiplier': 'Fixed (1)'}],'lifetime': '30'},{'option': 'PV System Size|5.0 kWDC'},{'option': 'PV Orientation|South'}]}],'eagle': {'n_jobs': '3','minutes_per_sim': '5','account': '<account you are authorized to use>','postprocessing': {'time': '20','n_workers': '1'},'sampling': {'time': '10'}}},'.\project_PAsolar\PAsolar_upgrades.yml')]
+'strict':True
+'_raise_error':True
+'results':[Error validating data '.\project_PAsolar\PAsolar_upgrades.yml' with schema 'C:\Users\ianca\buildstockbatch\buildstockbatch\schemas\v0.3.yaml'
+	output_directory: 'PAsolar_upgrades' is not a regex match.]
+'is_valid':False
+'d':{'schema_version': '0.3','os_version': '3.8.0','os_sha': 'f953b6fcaf','buildstock_directory': '../','project_directory': 'project_PAsolar','output_directory': 'PAsolar_upgrades','weather_files_url': 'https://data.nrel.gov/system/files/156/Buildstock_TMY3_FIPS-1678817889.zip','sampler': {'type': 'residential_quota_downselect','args': {'n_datapoints': '10','logic': ['State|PA'],'resample': True}},'workflow_generator': {'type': 'residential_hpxml','args': {'build_existing_model': {'simulation_control_timestep': '60','simulation_control_run_period_begin_month': '1','simulation_control_run_period_begin_day_of_month': '1','simulation_control_run_period_end_month': '12','simulation_control_run_period_end_day_of_month': '31','simulation_control_run_period_calendar_year': '2007'},'emissions': [{'scenario_name': 'LRMER_MidCase_15','type': 'CO2e','elec_folder': 'data/emissions/cambium/2022/LRMER_MidCase_15'}],'utility_bills': [{'scenario_name': 'Bills'}],'simulation_output_report': {'timeseries_frequency': 'hourly','include_timeseries_total_consumptions': True,'include_timeseries_fuel_consumptions': True,'include_timeseries_end_use_consumptions': True,'include_timeseries_emissions': True,'include_timeseries_emission_fuels': True,'include_timeseries_emission_end_uses': True,'include_timeseries_hot_water_uses': True,'include_timeseries_total_loads': True,'include_timeseries_component_loads': True,'include_timeseries_unmet_hours': True,'include_timeseries_zone_temperatures': True,'include_timeseries_airflows': True,'include_timeseries_weather': True,'include_timeseries_resilience': True},'reporting_measures': [{'measure_dir_name': 'QOIReport'}],'server_directory_cleanup': {'retain_in_idf': False,'retain_schedules_csv': False}}},'baseline': {'n_buildings_represented': '5742828'},'upgrades': [{'upgrade_name': 'PV','options': [{'option': 'Has PV|Yes','costs': [{'value': '15000.0','multiplier': 'Fixed (1)'}],'lifetime': '30'},{'option': 'PV System Size|5.0 kWDC'},{'option': 'PV Orientation|South'}]}],'eagle': {'n_jobs': '3','minutes_per_sim': '5','account': '<account you are authorized to use>','postprocessing': {'time': '20','n_workers': '1'},'sampling': {'time': '10'}}}
+'path':'.\project_PAsolar\PAsolar_upgrades.yml'
+'result':Error validating data '.\project_PAsolar\PAsolar_upgrades.yml' with schema 'C:\Users\ianca\buildstockbatch\buildstockbatch\schemas\v0.3.yaml'
+	output_directory: 'PAsolar_upgrades' is not a regex match.
+
+####################
+Traceback (most recent call last):
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\utils.py", line 120, in run_with_error_capture
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\local.py", line 410, in main
+    LocalBatch.validate_project(args.project_filename)
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\local.py", line 121, in validate_project
+    super(cls, cls).validate_project(project_file)
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\base.py", line 272, in validate_project
+    assert cls.validate_project_schema(project_file)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\base.py", line 382, in validate_project_schema
+    return yamale.validate(schema, data, strict=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ianca\anaconda3\envs\build_env\Lib\site-packages\yamale\yamale.py", line 45, in validate
+    raise YamaleError(results)
+yamale.yamale_error.YamaleError: Error validating data '.\project_PAsolar\PAsolar_upgrades.yml' with schema 'C:\Users\ianca\buildstockbatch\buildstockbatch\schemas\v0.3.yaml'
+	upgrades.0.options.0 : 'None' is not a map
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\utils.py, module run_with_error_capture line: 120 
+Local Variables: 'args':()
+'kwargs':{}
+'f':<_io.TextIOWrapper name='buildstockbatch_crash_details.log' mode='a' encoding='cp1252'>
+'text':'
+####################
+'
+'func':<function main at 0x000001422DA042C0>
+'output_file':'buildstockbatch_crash_details.log'
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\local.py, module main line: 410 
+Local Variables: 'parser':ArgumentParser(prog='buildstock_local', usage=None, description=None, formatter_class=<class 'argparse.HelpFormatter'>, conflict_handler='error', add_help=True)
+'group':<argparse._MutuallyExclusiveGroup object at 0x000001422D9F5F40>
+'args':Namespace(project_filename='.\\project_PAsolar\\PAsolar_upgrades.yml', j=None, measures_only=False, postprocessonly=False, uploadonly=False, validateonly=False, samplingonly=False)
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\local.py, module validate_project line: 121 
+Local Variables: 'cls':<class 'buildstockbatch.local.LocalBatch'>
+'project_file':'.\project_PAsolar\PAsolar_upgrades.yml'
+'__class__':<class 'buildstockbatch.local.LocalBatch'>
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\base.py, module validate_project line: 272 
+Local Variables: 'cls':<class 'buildstockbatch.local.LocalBatch'>
+'project_file':'.\project_PAsolar\PAsolar_upgrades.yml'
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\base.py, module validate_project_schema line: 382 
+Local Variables: 'project_file':'.\project_PAsolar\PAsolar_upgrades.yml'
+'cfg':{'schema_version': '0.3','os_version': '3.8.0','os_sha': 'f953b6fcaf','buildstock_directory': 'C:\Users\ianca\resstock','project_directory': 'project_PAsolar','output_directory': 'national_upgrades','weather_files_url': 'https://data.nrel.gov/system/files/156/Buildstock_TMY3_FIPS-1678817889.zip','sampler': {'type': 'precomputed','args': {'sample_file': 'C:\Users\ianca\resstock\project_PAsolar\housing_characteristics\buildstock.csv'}},'workflow_generator': {'type': 'residential_hpxml','args': {'build_existing_model': {'simulation_control_timestep': '60','simulation_control_run_period_begin_month': '1','simulation_control_run_period_begin_day_of_month': '1','simulation_control_run_period_end_month': '12','simulation_control_run_period_end_day_of_month': '31','simulation_control_run_period_calendar_year': '2007'},'emissions': [{'scenario_name': 'LRMER_MidCase_15','type': 'CO2e','elec_folder': 'data/emissions/cambium/2022/LRMER_MidCase_15'}],'utility_bills': [{'scenario_name': 'Bills'}],'simulation_output_report': {'timeseries_frequency': 'hourly','include_timeseries_total_consumptions': True,'include_timeseries_fuel_consumptions': True,'include_timeseries_end_use_consumptions': True,'include_timeseries_emissions': True,'include_timeseries_emission_fuels': True,'include_timeseries_emission_end_uses': True,'include_timeseries_hot_water_uses': True,'include_timeseries_total_loads': True,'include_timeseries_component_loads': True,'include_timeseries_unmet_hours': True,'include_timeseries_zone_temperatures': True,'include_timeseries_airflows': True,'include_timeseries_weather': True,'include_timeseries_resilience': True},'reporting_measures': [{'measure_dir_name': 'QOIReport'}],'server_directory_cleanup': {'retain_in_idf': False,'retain_schedules_csv': False}}},'baseline': {'n_buildings_represented': '5742828'},'upgrades': [{'upgrade_name': 'PV','options': [None,{'option': 'PV System Size|5.0 kWDC'},{'option': 'PV Orientation|South'}]}]}
+'schema_version':'0.3'
+'version_schema':'C:\Users\ianca\buildstockbatch\buildstockbatch\schemas\v0.3.yaml'
+'schema':<yamale.schema.schema.Schema object at 0x000001422AF7A900>
+'data':[({'schema_version': '0.3','os_version': '3.8.0','os_sha': 'f953b6fcaf','buildstock_directory': '../','project_directory': 'project_PAsolar','output_directory': 'national_upgrades','weather_files_url': 'https://data.nrel.gov/system/files/156/Buildstock_TMY3_FIPS-1678817889.zip','sampler': {'type': 'precomputed','args': {'sample_file': 'C:\Users\ianca\resstock\project_PAsolar\housing_characteristics\buildstock.csv'}},'workflow_generator': {'type': 'residential_hpxml','args': {'build_existing_model': {'simulation_control_timestep': '60','simulation_control_run_period_begin_month': '1','simulation_control_run_period_begin_day_of_month': '1','simulation_control_run_period_end_month': '12','simulation_control_run_period_end_day_of_month': '31','simulation_control_run_period_calendar_year': '2007'},'emissions': [{'scenario_name': 'LRMER_MidCase_15','type': 'CO2e','elec_folder': 'data/emissions/cambium/2022/LRMER_MidCase_15'}],'utility_bills': [{'scenario_name': 'Bills'}],'simulation_output_report': {'timeseries_frequency': 'hourly','include_timeseries_total_consumptions': True,'include_timeseries_fuel_consumptions': True,'include_timeseries_end_use_consumptions': True,'include_timeseries_emissions': True,'include_timeseries_emission_fuels': True,'include_timeseries_emission_end_uses': True,'include_timeseries_hot_water_uses': True,'include_timeseries_total_loads': True,'include_timeseries_component_loads': True,'include_timeseries_unmet_hours': True,'include_timeseries_zone_temperatures': True,'include_timeseries_airflows': True,'include_timeseries_weather': True,'include_timeseries_resilience': True},'reporting_measures': [{'measure_dir_name': 'QOIReport'}],'server_directory_cleanup': {'retain_in_idf': False,'retain_schedules_csv': False}}},'baseline': {'n_buildings_represented': '5742828'},'upgrades': [{'upgrade_name': 'PV','options': [None,{'option': 'PV System Size|5.0 kWDC'},{'option': 'PV Orientation|South'}]}]},'.\project_PAsolar\PAsolar_upgrades.yml')]
+
+In file: C:\Users\ianca\anaconda3\envs\build_env\Lib\site-packages\yamale\yamale.py, module validate line: 45 
+Local Variables: 'schema':<yamale.schema.schema.Schema object at 0x000001422AF7A900>
+'data':[({'schema_version': '0.3','os_version': '3.8.0','os_sha': 'f953b6fcaf','buildstock_directory': '../','project_directory': 'project_PAsolar','output_directory': 'national_upgrades','weather_files_url': 'https://data.nrel.gov/system/files/156/Buildstock_TMY3_FIPS-1678817889.zip','sampler': {'type': 'precomputed','args': {'sample_file': 'C:\Users\ianca\resstock\project_PAsolar\housing_characteristics\buildstock.csv'}},'workflow_generator': {'type': 'residential_hpxml','args': {'build_existing_model': {'simulation_control_timestep': '60','simulation_control_run_period_begin_month': '1','simulation_control_run_period_begin_day_of_month': '1','simulation_control_run_period_end_month': '12','simulation_control_run_period_end_day_of_month': '31','simulation_control_run_period_calendar_year': '2007'},'emissions': [{'scenario_name': 'LRMER_MidCase_15','type': 'CO2e','elec_folder': 'data/emissions/cambium/2022/LRMER_MidCase_15'}],'utility_bills': [{'scenario_name': 'Bills'}],'simulation_output_report': {'timeseries_frequency': 'hourly','include_timeseries_total_consumptions': True,'include_timeseries_fuel_consumptions': True,'include_timeseries_end_use_consumptions': True,'include_timeseries_emissions': True,'include_timeseries_emission_fuels': True,'include_timeseries_emission_end_uses': True,'include_timeseries_hot_water_uses': True,'include_timeseries_total_loads': True,'include_timeseries_component_loads': True,'include_timeseries_unmet_hours': True,'include_timeseries_zone_temperatures': True,'include_timeseries_airflows': True,'include_timeseries_weather': True,'include_timeseries_resilience': True},'reporting_measures': [{'measure_dir_name': 'QOIReport'}],'server_directory_cleanup': {'retain_in_idf': False,'retain_schedules_csv': False}}},'baseline': {'n_buildings_represented': '5742828'},'upgrades': [{'upgrade_name': 'PV','options': [None,{'option': 'PV System Size|5.0 kWDC'},{'option': 'PV Orientation|South'}]}]},'.\project_PAsolar\PAsolar_upgrades.yml')]
+'strict':True
+'_raise_error':True
+'results':[Error validating data '.\project_PAsolar\PAsolar_upgrades.yml' with schema 'C:\Users\ianca\buildstockbatch\buildstockbatch\schemas\v0.3.yaml'
+	upgrades.0.options.0 : 'None' is not a map]
+'is_valid':False
+'d':{'schema_version': '0.3','os_version': '3.8.0','os_sha': 'f953b6fcaf','buildstock_directory': '../','project_directory': 'project_PAsolar','output_directory': 'national_upgrades','weather_files_url': 'https://data.nrel.gov/system/files/156/Buildstock_TMY3_FIPS-1678817889.zip','sampler': {'type': 'precomputed','args': {'sample_file': 'C:\Users\ianca\resstock\project_PAsolar\housing_characteristics\buildstock.csv'}},'workflow_generator': {'type': 'residential_hpxml','args': {'build_existing_model': {'simulation_control_timestep': '60','simulation_control_run_period_begin_month': '1','simulation_control_run_period_begin_day_of_month': '1','simulation_control_run_period_end_month': '12','simulation_control_run_period_end_day_of_month': '31','simulation_control_run_period_calendar_year': '2007'},'emissions': [{'scenario_name': 'LRMER_MidCase_15','type': 'CO2e','elec_folder': 'data/emissions/cambium/2022/LRMER_MidCase_15'}],'utility_bills': [{'scenario_name': 'Bills'}],'simulation_output_report': {'timeseries_frequency': 'hourly','include_timeseries_total_consumptions': True,'include_timeseries_fuel_consumptions': True,'include_timeseries_end_use_consumptions': True,'include_timeseries_emissions': True,'include_timeseries_emission_fuels': True,'include_timeseries_emission_end_uses': True,'include_timeseries_hot_water_uses': True,'include_timeseries_total_loads': True,'include_timeseries_component_loads': True,'include_timeseries_unmet_hours': True,'include_timeseries_zone_temperatures': True,'include_timeseries_airflows': True,'include_timeseries_weather': True,'include_timeseries_resilience': True},'reporting_measures': [{'measure_dir_name': 'QOIReport'}],'server_directory_cleanup': {'retain_in_idf': False,'retain_schedules_csv': False}}},'baseline': {'n_buildings_represented': '5742828'},'upgrades': [{'upgrade_name': 'PV','options': [None,{'option': 'PV System Size|5.0 kWDC'},{'option': 'PV Orientation|South'}]}]}
+'path':'.\project_PAsolar\PAsolar_upgrades.yml'
+'result':Error validating data '.\project_PAsolar\PAsolar_upgrades.yml' with schema 'C:\Users\ianca\buildstockbatch\buildstockbatch\schemas\v0.3.yaml'
+	upgrades.0.options.0 : 'None' is not a map
+
+####################
+Traceback (most recent call last):
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\utils.py", line 120, in run_with_error_capture
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\local.py", line 410, in main
+    LocalBatch.validate_project(args.project_filename)
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\local.py", line 121, in validate_project
+    super(cls, cls).validate_project(project_file)
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\base.py", line 272, in validate_project
+    assert cls.validate_project_schema(project_file)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\base.py", line 382, in validate_project_schema
+    return yamale.validate(schema, data, strict=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ianca\anaconda3\envs\build_env\Lib\site-packages\yamale\yamale.py", line 45, in validate
+    raise YamaleError(results)
+yamale.yamale_error.YamaleError: Error validating data '.\project_PAsolar\PAsolar_upgrades.yml' with schema 'C:\Users\ianca\buildstockbatch\buildstockbatch\schemas\v0.3.yaml'
+	upgrades.0.options.0 : 'None' is not a map
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\utils.py, module run_with_error_capture line: 120 
+Local Variables: 'args':()
+'kwargs':{}
+'f':<_io.TextIOWrapper name='buildstockbatch_crash_details.log' mode='a' encoding='cp1252'>
+'text':'
+####################
+'
+'func':<function main at 0x000002353A0A42C0>
+'output_file':'buildstockbatch_crash_details.log'
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\local.py, module main line: 410 
+Local Variables: 'parser':ArgumentParser(prog='buildstock_local', usage=None, description=None, formatter_class=<class 'argparse.HelpFormatter'>, conflict_handler='error', add_help=True)
+'group':<argparse._MutuallyExclusiveGroup object at 0x000002353A099B50>
+'args':Namespace(project_filename='.\\project_PAsolar\\PAsolar_upgrades.yml', j=None, measures_only=False, postprocessonly=False, uploadonly=False, validateonly=False, samplingonly=False)
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\local.py, module validate_project line: 121 
+Local Variables: 'cls':<class 'buildstockbatch.local.LocalBatch'>
+'project_file':'.\project_PAsolar\PAsolar_upgrades.yml'
+'__class__':<class 'buildstockbatch.local.LocalBatch'>
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\base.py, module validate_project line: 272 
+Local Variables: 'cls':<class 'buildstockbatch.local.LocalBatch'>
+'project_file':'.\project_PAsolar\PAsolar_upgrades.yml'
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\base.py, module validate_project_schema line: 382 
+Local Variables: 'project_file':'.\project_PAsolar\PAsolar_upgrades.yml'
+'cfg':{'schema_version': '0.3','os_version': '3.8.0','os_sha': 'f953b6fcaf','buildstock_directory': 'C:\Users\ianca\resstock','project_directory': 'project_PAsolar','output_directory': 'national_upgrades','weather_files_url': 'https://data.nrel.gov/system/files/156/Buildstock_TMY3_FIPS-1678817889.zip','sampler': {'type': 'residential_quota_downselect','args': {'n_datapoints': '10','logic': ['State|PA'],'resample': True}},'workflow_generator': {'type': 'residential_hpxml','args': {'build_existing_model': {'simulation_control_timestep': '60','simulation_control_run_period_begin_month': '1','simulation_control_run_period_begin_day_of_month': '1','simulation_control_run_period_end_month': '12','simulation_control_run_period_end_day_of_month': '31','simulation_control_run_period_calendar_year': '2007'},'emissions': [{'scenario_name': 'LRMER_MidCase_15','type': 'CO2e','elec_folder': 'data/emissions/cambium/2022/LRMER_MidCase_15'}],'utility_bills': [{'scenario_name': 'Bills'}],'simulation_output_report': {'timeseries_frequency': 'hourly','include_timeseries_total_consumptions': True,'include_timeseries_fuel_consumptions': True,'include_timeseries_end_use_consumptions': True,'include_timeseries_emissions': True,'include_timeseries_emission_fuels': True,'include_timeseries_emission_end_uses': True,'include_timeseries_hot_water_uses': True,'include_timeseries_total_loads': True,'include_timeseries_component_loads': True,'include_timeseries_unmet_hours': True,'include_timeseries_zone_temperatures': True,'include_timeseries_airflows': True,'include_timeseries_weather': True,'include_timeseries_resilience': True},'reporting_measures': [{'measure_dir_name': 'QOIReport'}],'server_directory_cleanup': {'retain_in_idf': False,'retain_schedules_csv': False}}},'baseline': {'n_buildings_represented': '5742828'},'upgrades': [{'upgrade_name': 'PV','options': [None,{'option': 'PV System Size|5.0 kWDC'},{'option': 'PV Orientation|South'}]}]}
+'schema_version':'0.3'
+'version_schema':'C:\Users\ianca\buildstockbatch\buildstockbatch\schemas\v0.3.yaml'
+'schema':<yamale.schema.schema.Schema object at 0x0000023523D05EB0>
+'data':[({'schema_version': '0.3','os_version': '3.8.0','os_sha': 'f953b6fcaf','buildstock_directory': '../','project_directory': 'project_PAsolar','output_directory': 'national_upgrades','weather_files_url': 'https://data.nrel.gov/system/files/156/Buildstock_TMY3_FIPS-1678817889.zip','sampler': {'type': 'residential_quota_downselect','args': {'n_datapoints': '10','logic': ['State|PA'],'resample': True}},'workflow_generator': {'type': 'residential_hpxml','args': {'build_existing_model': {'simulation_control_timestep': '60','simulation_control_run_period_begin_month': '1','simulation_control_run_period_begin_day_of_month': '1','simulation_control_run_period_end_month': '12','simulation_control_run_period_end_day_of_month': '31','simulation_control_run_period_calendar_year': '2007'},'emissions': [{'scenario_name': 'LRMER_MidCase_15','type': 'CO2e','elec_folder': 'data/emissions/cambium/2022/LRMER_MidCase_15'}],'utility_bills': [{'scenario_name': 'Bills'}],'simulation_output_report': {'timeseries_frequency': 'hourly','include_timeseries_total_consumptions': True,'include_timeseries_fuel_consumptions': True,'include_timeseries_end_use_consumptions': True,'include_timeseries_emissions': True,'include_timeseries_emission_fuels': True,'include_timeseries_emission_end_uses': True,'include_timeseries_hot_water_uses': True,'include_timeseries_total_loads': True,'include_timeseries_component_loads': True,'include_timeseries_unmet_hours': True,'include_timeseries_zone_temperatures': True,'include_timeseries_airflows': True,'include_timeseries_weather': True,'include_timeseries_resilience': True},'reporting_measures': [{'measure_dir_name': 'QOIReport'}],'server_directory_cleanup': {'retain_in_idf': False,'retain_schedules_csv': False}}},'baseline': {'n_buildings_represented': '5742828'},'upgrades': [{'upgrade_name': 'PV','options': [None,{'option': 'PV System Size|5.0 kWDC'},{'option': 'PV Orientation|South'}]}]},'.\project_PAsolar\PAsolar_upgrades.yml')]
+
+In file: C:\Users\ianca\anaconda3\envs\build_env\Lib\site-packages\yamale\yamale.py, module validate line: 45 
+Local Variables: 'schema':<yamale.schema.schema.Schema object at 0x0000023523D05EB0>
+'data':[({'schema_version': '0.3','os_version': '3.8.0','os_sha': 'f953b6fcaf','buildstock_directory': '../','project_directory': 'project_PAsolar','output_directory': 'national_upgrades','weather_files_url': 'https://data.nrel.gov/system/files/156/Buildstock_TMY3_FIPS-1678817889.zip','sampler': {'type': 'residential_quota_downselect','args': {'n_datapoints': '10','logic': ['State|PA'],'resample': True}},'workflow_generator': {'type': 'residential_hpxml','args': {'build_existing_model': {'simulation_control_timestep': '60','simulation_control_run_period_begin_month': '1','simulation_control_run_period_begin_day_of_month': '1','simulation_control_run_period_end_month': '12','simulation_control_run_period_end_day_of_month': '31','simulation_control_run_period_calendar_year': '2007'},'emissions': [{'scenario_name': 'LRMER_MidCase_15','type': 'CO2e','elec_folder': 'data/emissions/cambium/2022/LRMER_MidCase_15'}],'utility_bills': [{'scenario_name': 'Bills'}],'simulation_output_report': {'timeseries_frequency': 'hourly','include_timeseries_total_consumptions': True,'include_timeseries_fuel_consumptions': True,'include_timeseries_end_use_consumptions': True,'include_timeseries_emissions': True,'include_timeseries_emission_fuels': True,'include_timeseries_emission_end_uses': True,'include_timeseries_hot_water_uses': True,'include_timeseries_total_loads': True,'include_timeseries_component_loads': True,'include_timeseries_unmet_hours': True,'include_timeseries_zone_temperatures': True,'include_timeseries_airflows': True,'include_timeseries_weather': True,'include_timeseries_resilience': True},'reporting_measures': [{'measure_dir_name': 'QOIReport'}],'server_directory_cleanup': {'retain_in_idf': False,'retain_schedules_csv': False}}},'baseline': {'n_buildings_represented': '5742828'},'upgrades': [{'upgrade_name': 'PV','options': [None,{'option': 'PV System Size|5.0 kWDC'},{'option': 'PV Orientation|South'}]}]},'.\project_PAsolar\PAsolar_upgrades.yml')]
+'strict':True
+'_raise_error':True
+'results':[Error validating data '.\project_PAsolar\PAsolar_upgrades.yml' with schema 'C:\Users\ianca\buildstockbatch\buildstockbatch\schemas\v0.3.yaml'
+	upgrades.0.options.0 : 'None' is not a map]
+'is_valid':False
+'d':{'schema_version': '0.3','os_version': '3.8.0','os_sha': 'f953b6fcaf','buildstock_directory': '../','project_directory': 'project_PAsolar','output_directory': 'national_upgrades','weather_files_url': 'https://data.nrel.gov/system/files/156/Buildstock_TMY3_FIPS-1678817889.zip','sampler': {'type': 'residential_quota_downselect','args': {'n_datapoints': '10','logic': ['State|PA'],'resample': True}},'workflow_generator': {'type': 'residential_hpxml','args': {'build_existing_model': {'simulation_control_timestep': '60','simulation_control_run_period_begin_month': '1','simulation_control_run_period_begin_day_of_month': '1','simulation_control_run_period_end_month': '12','simulation_control_run_period_end_day_of_month': '31','simulation_control_run_period_calendar_year': '2007'},'emissions': [{'scenario_name': 'LRMER_MidCase_15','type': 'CO2e','elec_folder': 'data/emissions/cambium/2022/LRMER_MidCase_15'}],'utility_bills': [{'scenario_name': 'Bills'}],'simulation_output_report': {'timeseries_frequency': 'hourly','include_timeseries_total_consumptions': True,'include_timeseries_fuel_consumptions': True,'include_timeseries_end_use_consumptions': True,'include_timeseries_emissions': True,'include_timeseries_emission_fuels': True,'include_timeseries_emission_end_uses': True,'include_timeseries_hot_water_uses': True,'include_timeseries_total_loads': True,'include_timeseries_component_loads': True,'include_timeseries_unmet_hours': True,'include_timeseries_zone_temperatures': True,'include_timeseries_airflows': True,'include_timeseries_weather': True,'include_timeseries_resilience': True},'reporting_measures': [{'measure_dir_name': 'QOIReport'}],'server_directory_cleanup': {'retain_in_idf': False,'retain_schedules_csv': False}}},'baseline': {'n_buildings_represented': '5742828'},'upgrades': [{'upgrade_name': 'PV','options': [None,{'option': 'PV System Size|5.0 kWDC'},{'option': 'PV Orientation|South'}]}]}
+'path':'.\project_PAsolar\PAsolar_upgrades.yml'
+'result':Error validating data '.\project_PAsolar\PAsolar_upgrades.yml' with schema 'C:\Users\ianca\buildstockbatch\buildstockbatch\schemas\v0.3.yaml'
+	upgrades.0.options.0 : 'None' is not a map
+
+####################
+Traceback (most recent call last):
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\utils.py", line 120, in run_with_error_capture
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\local.py", line 425, in main
+    batch.process_results()
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\base.py", line 925, in process_results
+    postprocessing.combine_results(fs, self.results_dir, self.cfg, do_timeseries=do_timeseries)
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\postprocessing.py", line 419, in combine_results
+    fs.makedirs(dr)
+  File "C:\Users\ianca\anaconda3\envs\build_env\Lib\site-packages\fsspec\implementations\local.py", line 52, in makedirs
+    os.makedirs(path, exist_ok=exist_ok)
+  File "<frozen os>", line 225, in makedirs
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'C:/Users/ianca/resstock/project_PAsolar/national_upgrades/results_csvs'
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\utils.py, module run_with_error_capture line: 120 
+Local Variables: 'args':()
+'kwargs':{}
+'f':<_io.TextIOWrapper name='buildstockbatch_crash_details.log' mode='a' encoding='cp1252'>
+'text':'
+####################
+'
+'func':<function main at 0x00000193EEC042C0>
+'output_file':'buildstockbatch_crash_details.log'
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\local.py, module main line: 425 
+Local Variables: 'parser':ArgumentParser(prog='buildstock_local', usage=None, description=None, formatter_class=<class 'argparse.HelpFormatter'>, conflict_handler='error', add_help=True)
+'group':<argparse._MutuallyExclusiveGroup object at 0x00000193EE998AA0>
+'args':Namespace(project_filename='.\\project_PAsolar\\PAsolar_upgrades.yml', j=None, measures_only=False, postprocessonly=False, uploadonly=False, validateonly=False, samplingonly=False)
+'batch':<buildstockbatch.local.LocalBatch object at 0x00000193EECF1940>
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\base.py, module process_results line: 925 
+Local Variables: 'self':<buildstockbatch.local.LocalBatch object at 0x00000193EECF1940>
+'skip_combine':False
+'use_dask_cluster':True
+'wfg_args':{'build_existing_model': {'simulation_control_timestep': '60','simulation_control_run_period_begin_month': '1','simulation_control_run_period_begin_day_of_month': '1','simulation_control_run_period_end_month': '12','simulation_control_run_period_end_day_of_month': '31','simulation_control_run_period_calendar_year': '2007'},'emissions': [{'scenario_name': 'LRMER_MidCase_15','type': 'CO2e','elec_folder': 'data/emissions/cambium/2022/LRMER_MidCase_15'}],'utility_bills': [{'scenario_name': 'Bills'}],'simulation_output_report': {'timeseries_frequency': 'hourly','include_timeseries_total_consumptions': True,'include_timeseries_fuel_consumptions': True,'include_timeseries_end_use_consumptions': True,'include_timeseries_emissions': True,'include_timeseries_emission_fuels': True,'include_timeseries_emission_end_uses': True,'include_timeseries_hot_water_uses': True,'include_timeseries_total_loads': True,'include_timeseries_component_loads': True,'include_timeseries_unmet_hours': True,'include_timeseries_zone_temperatures': True,'include_timeseries_airflows': True,'include_timeseries_weather': True,'include_timeseries_resilience': True},'reporting_measures': [{'measure_dir_name': 'QOIReport'}],'server_directory_cleanup': {'retain_in_idf': False,'retain_schedules_csv': False}}
+'do_timeseries':True
+'fs':<fsspec.implementations.local.LocalFileSystem object at 0x00000193EFC3C800>
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\postprocessing.py, module combine_results line: 419 
+Local Variables: 'fs':<fsspec.implementations.local.LocalFileSystem object at 0x00000193EFC3C800>
+'results_dir':'C:\Users\ianca\resstock\project_PAsolar\national_upgrades'
+'cfg':{'schema_version': '0.3','os_version': '3.8.0','os_sha': 'f953b6fcaf','buildstock_directory': 'C:\Users\ianca\resstock','project_directory': 'project_PAsolar','output_directory': 'national_upgrades','weather_files_url': 'https://data.nrel.gov/system/files/156/Buildstock_TMY3_FIPS-1678817889.zip','sampler': {'type': 'precomputed','args': {'sample_file': 'C:\Users\ianca\resstock\project_PAsolar\housing_characteristics\buildstock.csv'}},'workflow_generator': {'type': 'residential_hpxml','args': {'build_existing_model': {'simulation_control_timestep': '60','simulation_control_run_period_begin_month': '1','simulation_control_run_period_begin_day_of_month': '1','simulation_control_run_period_end_month': '12','simulation_control_run_period_end_day_of_month': '31','simulation_control_run_period_calendar_year': '2007'},'emissions': [{'scenario_name': 'LRMER_MidCase_15','type': 'CO2e','elec_folder': 'data/emissions/cambium/2022/LRMER_MidCase_15'}],'utility_bills': [{'scenario_name': 'Bills'}],'simulation_output_report': {'timeseries_frequency': 'hourly','include_timeseries_total_consumptions': True,'include_timeseries_fuel_consumptions': True,'include_timeseries_end_use_consumptions': True,'include_timeseries_emissions': True,'include_timeseries_emission_fuels': True,'include_timeseries_emission_end_uses': True,'include_timeseries_hot_water_uses': True,'include_timeseries_total_loads': True,'include_timeseries_component_loads': True,'include_timeseries_unmet_hours': True,'include_timeseries_zone_temperatures': True,'include_timeseries_airflows': True,'include_timeseries_weather': True,'include_timeseries_resilience': True},'reporting_measures': [{'measure_dir_name': 'QOIReport'}],'server_directory_cleanup': {'retain_in_idf': False,'retain_schedules_csv': False}}},'baseline': {'n_buildings_represented': '5742828'},'upgrades': [{'upgrade_name': 'PV','options': [{'option': 'Has PV|Yes'}]}]}
+'do_timeseries':True
+'sim_output_dir':'C:\Users\ianca\resstock\project_PAsolar\national_upgrades/simulation_output'
+'ts_in_dir':'C:\Users\ianca\resstock\project_PAsolar\national_upgrades/simulation_output/timeseries'
+'results_csvs_dir':'C:\Users\ianca\resstock\project_PAsolar\national_upgrades/results_csvs'
+'parquet_dir':'C:\Users\ianca\resstock\project_PAsolar\national_upgrades/parquet'
+'ts_dir':'C:\Users\ianca\resstock\project_PAsolar\national_upgrades/parquet/timeseries'
+'dirs':['C:\Users\ianca\resstock\project_PAsolar\national_upgrades/results_csvs','C:\Users\ianca\resstock\project_PAsolar\national_upgrades/parquet','C:\Users\ianca\resstock\project_PAsolar\national_upgrades/parquet/timeseries']
+'dr':'C:\Users\ianca\resstock\project_PAsolar\national_upgrades/results_csvs'
+
+In file: C:\Users\ianca\anaconda3\envs\build_env\Lib\site-packages\fsspec\implementations\local.py, module makedirs line: 52 
+Local Variables: 'self':<fsspec.implementations.local.LocalFileSystem object at 0x00000193EFC3C800>
+'path':'C:/Users/ianca/resstock/project_PAsolar/national_upgrades/results_csvs'
+'exist_ok':False
+
+In file: <frozen os>, module makedirs line: 225 
+Local Variables: 'name':'C:/Users/ianca/resstock/project_PAsolar/national_upgrades/results_csvs'
+'mode':'511'
+'exist_ok':False
+'head':'C:/Users/ianca/resstock/project_PAsolar/national_upgrades'
+'tail':'results_csvs'
+
+####################
+Traceback (most recent call last):
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\utils.py", line 120, in run_with_error_capture
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\local.py", line 425, in main
+    batch.process_results()
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\base.py", line 925, in process_results
+    postprocessing.combine_results(fs, self.results_dir, self.cfg, do_timeseries=do_timeseries)
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\postprocessing.py", line 419, in combine_results
+    fs.makedirs(dr)
+  File "C:\Users\ianca\anaconda3\envs\build_env\Lib\site-packages\fsspec\implementations\local.py", line 52, in makedirs
+    os.makedirs(path, exist_ok=exist_ok)
+  File "<frozen os>", line 225, in makedirs
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'C:/Users/ianca/resstock/project_PAsolar/national_upgrades/parquet'
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\utils.py, module run_with_error_capture line: 120 
+Local Variables: 'args':()
+'kwargs':{}
+'f':<_io.TextIOWrapper name='buildstockbatch_crash_details.log' mode='a' encoding='cp1252'>
+'text':'
+####################
+'
+'func':<function main at 0x00000202324542C0>
+'output_file':'buildstockbatch_crash_details.log'
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\local.py, module main line: 425 
+Local Variables: 'parser':ArgumentParser(prog='buildstock_local', usage=None, description=None, formatter_class=<class 'argparse.HelpFormatter'>, conflict_handler='error', add_help=True)
+'group':<argparse._MutuallyExclusiveGroup object at 0x0000020232445D00>
+'args':Namespace(project_filename='.\\project_PAsolar\\PAsolar_upgrades.yml', j=None, measures_only=False, postprocessonly=False, uploadonly=False, validateonly=False, samplingonly=False)
+'batch':<buildstockbatch.local.LocalBatch object at 0x000002022FDE99A0>
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\base.py, module process_results line: 925 
+Local Variables: 'self':<buildstockbatch.local.LocalBatch object at 0x000002022FDE99A0>
+'skip_combine':False
+'use_dask_cluster':True
+'wfg_args':{'build_existing_model': {'simulation_control_timestep': '60','simulation_control_run_period_begin_month': '1','simulation_control_run_period_begin_day_of_month': '1','simulation_control_run_period_end_month': '12','simulation_control_run_period_end_day_of_month': '31','simulation_control_run_period_calendar_year': '2007'},'emissions': [{'scenario_name': 'LRMER_MidCase_15','type': 'CO2e','elec_folder': 'data/emissions/cambium/2022/LRMER_MidCase_15'}],'utility_bills': [{'scenario_name': 'Bills'}],'simulation_output_report': {'timeseries_frequency': 'hourly','include_timeseries_total_consumptions': True,'include_timeseries_fuel_consumptions': True,'include_timeseries_end_use_consumptions': True,'include_timeseries_emissions': True,'include_timeseries_emission_fuels': True,'include_timeseries_emission_end_uses': True,'include_timeseries_hot_water_uses': True,'include_timeseries_total_loads': True,'include_timeseries_component_loads': True,'include_timeseries_unmet_hours': True,'include_timeseries_zone_temperatures': True,'include_timeseries_airflows': True,'include_timeseries_weather': True,'include_timeseries_resilience': True},'reporting_measures': [{'measure_dir_name': 'QOIReport'}],'server_directory_cleanup': {'retain_in_idf': False,'retain_schedules_csv': False}}
+'do_timeseries':True
+'fs':<fsspec.implementations.local.LocalFileSystem object at 0x0000020233560740>
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\postprocessing.py, module combine_results line: 419 
+Local Variables: 'fs':<fsspec.implementations.local.LocalFileSystem object at 0x0000020233560740>
+'results_dir':'C:\Users\ianca\resstock\project_PAsolar\national_upgrades'
+'cfg':{'schema_version': '0.3','os_version': '3.8.0','os_sha': 'f953b6fcaf','buildstock_directory': 'C:\Users\ianca\resstock','project_directory': 'project_PAsolar','output_directory': 'national_upgrades','weather_files_url': 'https://data.nrel.gov/system/files/156/Buildstock_TMY3_FIPS-1678817889.zip','sampler': {'type': 'precomputed','args': {'sample_file': 'C:\Users\ianca\resstock\project_PAsolar\housing_characteristics\buildstock.csv'}},'workflow_generator': {'type': 'residential_hpxml','args': {'build_existing_model': {'simulation_control_timestep': '60','simulation_control_run_period_begin_month': '1','simulation_control_run_period_begin_day_of_month': '1','simulation_control_run_period_end_month': '12','simulation_control_run_period_end_day_of_month': '31','simulation_control_run_period_calendar_year': '2007'},'emissions': [{'scenario_name': 'LRMER_MidCase_15','type': 'CO2e','elec_folder': 'data/emissions/cambium/2022/LRMER_MidCase_15'}],'utility_bills': [{'scenario_name': 'Bills'}],'simulation_output_report': {'timeseries_frequency': 'hourly','include_timeseries_total_consumptions': True,'include_timeseries_fuel_consumptions': True,'include_timeseries_end_use_consumptions': True,'include_timeseries_emissions': True,'include_timeseries_emission_fuels': True,'include_timeseries_emission_end_uses': True,'include_timeseries_hot_water_uses': True,'include_timeseries_total_loads': True,'include_timeseries_component_loads': True,'include_timeseries_unmet_hours': True,'include_timeseries_zone_temperatures': True,'include_timeseries_airflows': True,'include_timeseries_weather': True,'include_timeseries_resilience': True},'reporting_measures': [{'measure_dir_name': 'QOIReport'}],'server_directory_cleanup': {'retain_in_idf': False,'retain_schedules_csv': False}}},'baseline': {'n_buildings_represented': '5742828'},'upgrades': [{'upgrade_name': 'PV','options': [{'option': 'Has PV|Yes'}]}]}
+'do_timeseries':True
+'sim_output_dir':'C:\Users\ianca\resstock\project_PAsolar\national_upgrades/simulation_output'
+'ts_in_dir':'C:\Users\ianca\resstock\project_PAsolar\national_upgrades/simulation_output/timeseries'
+'results_csvs_dir':'C:\Users\ianca\resstock\project_PAsolar\national_upgrades/results_csvs'
+'parquet_dir':'C:\Users\ianca\resstock\project_PAsolar\national_upgrades/parquet'
+'ts_dir':'C:\Users\ianca\resstock\project_PAsolar\national_upgrades/parquet/timeseries'
+'dirs':['C:\Users\ianca\resstock\project_PAsolar\national_upgrades/results_csvs','C:\Users\ianca\resstock\project_PAsolar\national_upgrades/parquet','C:\Users\ianca\resstock\project_PAsolar\national_upgrades/parquet/timeseries']
+'dr':'C:\Users\ianca\resstock\project_PAsolar\national_upgrades/parquet'
+
+In file: C:\Users\ianca\anaconda3\envs\build_env\Lib\site-packages\fsspec\implementations\local.py, module makedirs line: 52 
+Local Variables: 'self':<fsspec.implementations.local.LocalFileSystem object at 0x0000020233560740>
+'path':'C:/Users/ianca/resstock/project_PAsolar/national_upgrades/parquet'
+'exist_ok':False
+
+In file: <frozen os>, module makedirs line: 225 
+Local Variables: 'name':'C:/Users/ianca/resstock/project_PAsolar/national_upgrades/parquet'
+'mode':'511'
+'exist_ok':False
+'head':'C:/Users/ianca/resstock/project_PAsolar/national_upgrades'
+'tail':'parquet'
+
+####################
+Traceback (most recent call last):
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\utils.py", line 120, in run_with_error_capture
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\local.py", line 407, in main
+    raise FileNotFoundError(f"The project file {args.project_filename} doesn't exist")
+FileNotFoundError: The project file .\project_PAbaseline\PAsolar_baseline.yml doesn't exist
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\utils.py, module run_with_error_capture line: 120 
+Local Variables: 'args':()
+'kwargs':{}
+'f':<_io.TextIOWrapper name='buildstockbatch_crash_details.log' mode='a' encoding='cp1252'>
+'text':'
+####################
+'
+'func':<function main at 0x000001FBEB2B42C0>
+'output_file':'buildstockbatch_crash_details.log'
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\local.py, module main line: 407 
+Local Variables: 'parser':ArgumentParser(prog='buildstock_local', usage=None, description=None, formatter_class=<class 'argparse.HelpFormatter'>, conflict_handler='error', add_help=True)
+'group':<argparse._MutuallyExclusiveGroup object at 0x000001FBEB2A9D60>
+'args':Namespace(project_filename='.\\project_PAbaseline\\PAsolar_baseline.yml', j=None, measures_only=False, postprocessonly=False, uploadonly=False, validateonly=False, samplingonly=False)
+
+####################
+Traceback (most recent call last):
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\utils.py", line 120, in run_with_error_capture
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\local.py", line 410, in main
+    LocalBatch.validate_project(args.project_filename)
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\local.py", line 121, in validate_project
+    super(cls, cls).validate_project(project_file)
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\base.py", line 272, in validate_project
+    assert cls.validate_project_schema(project_file)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ianca\buildstockbatch\buildstockbatch\base.py", line 382, in validate_project_schema
+    return yamale.validate(schema, data, strict=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ianca\anaconda3\envs\build_env\Lib\site-packages\yamale\yamale.py", line 45, in validate
+    raise YamaleError(results)
+yamale.yamale_error.YamaleError: Error validating data '.\project_PAbaseline\PAbaseline_baseline.yml' with schema 'C:\Users\ianca\buildstockbatch\buildstockbatch\schemas\v0.3.yaml'
+	output_directory: 'PAbaseline_baseline' is not a regex match.
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\utils.py, module run_with_error_capture line: 120 
+Local Variables: 'args':()
+'kwargs':{}
+'f':<_io.TextIOWrapper name='buildstockbatch_crash_details.log' mode='a' encoding='cp1252'>
+'text':'
+####################
+'
+'func':<function main at 0x000002163AD742C0>
+'output_file':'buildstockbatch_crash_details.log'
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\local.py, module main line: 410 
+Local Variables: 'parser':ArgumentParser(prog='buildstock_local', usage=None, description=None, formatter_class=<class 'argparse.HelpFormatter'>, conflict_handler='error', add_help=True)
+'group':<argparse._MutuallyExclusiveGroup object at 0x000002163AD65E80>
+'args':Namespace(project_filename='.\\project_PAbaseline\\PAbaseline_baseline.yml', j=None, measures_only=False, postprocessonly=False, uploadonly=False, validateonly=False, samplingonly=False)
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\local.py, module validate_project line: 121 
+Local Variables: 'cls':<class 'buildstockbatch.local.LocalBatch'>
+'project_file':'.\project_PAbaseline\PAbaseline_baseline.yml'
+'__class__':<class 'buildstockbatch.local.LocalBatch'>
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\base.py, module validate_project line: 272 
+Local Variables: 'cls':<class 'buildstockbatch.local.LocalBatch'>
+'project_file':'.\project_PAbaseline\PAbaseline_baseline.yml'
+
+In file: C:\Users\ianca\buildstockbatch\buildstockbatch\base.py, module validate_project_schema line: 382 
+Local Variables: 'project_file':'.\project_PAbaseline\PAbaseline_baseline.yml'
+'cfg':{'schema_version': '0.3','os_version': '3.8.0','os_sha': 'f953b6fcaf','buildstock_directory': 'C:\Users\ianca\resstock','project_directory': 'project_PAbaseline','output_directory': 'PAbaseline_baseline','weather_files_url': 'https://data.nrel.gov/system/files/156/Buildstock_TMY3_FIPS-1678817889.zip','sampler': {'type': 'residential_quota_downselect','args': {'n_datapoints': '10','logic': ['State|PA'],'resample': True}},'workflow_generator': {'type': 'residential_hpxml','args': {'build_existing_model': {'simulation_control_timestep': '60','simulation_control_run_period_begin_month': '1','simulation_control_run_period_begin_day_of_month': '1','simulation_control_run_period_end_month': '12','simulation_control_run_period_end_day_of_month': '31','simulation_control_run_period_calendar_year': '2007'},'emissions': [{'scenario_name': 'LRMER_MidCase_15','type': 'CO2e','elec_folder': 'data/emissions/cambium/2022/LRMER_MidCase_15'}],'utility_bills': [{'scenario_name': 'Bills'}],'simulation_output_report': {'timeseries_frequency': 'hourly','include_timeseries_total_consumptions': True,'include_timeseries_fuel_consumptions': True,'include_timeseries_end_use_consumptions': True,'include_timeseries_emissions': True,'include_timeseries_emission_fuels': True,'include_timeseries_emission_end_uses': True,'include_timeseries_hot_water_uses': True,'include_timeseries_total_loads': True,'include_timeseries_component_loads': True,'include_timeseries_unmet_hours': True,'include_timeseries_zone_temperatures': True,'include_timeseries_airflows': True,'include_timeseries_weather': True,'include_timeseries_resilience': True},'reporting_measures': [{'measure_dir_name': 'QOIReport'}],'server_directory_cleanup': {'retain_in_idf': False,'retain_schedules_csv': False}}},'baseline': {'n_buildings_represented': '5742828'}}
+'schema_version':'0.3'
+'version_schema':'C:\Users\ianca\buildstockbatch\buildstockbatch\schemas\v0.3.yaml'
+'schema':<yamale.schema.schema.Schema object at 0x0000021624B68B90>
+'data':[({'schema_version': '0.3','os_version': '3.8.0','os_sha': 'f953b6fcaf','buildstock_directory': '../','project_directory': 'project_PAbaseline','output_directory': 'PAbaseline_baseline','weather_files_url': 'https://data.nrel.gov/system/files/156/Buildstock_TMY3_FIPS-1678817889.zip','sampler': {'type': 'residential_quota_downselect','args': {'n_datapoints': '10','logic': ['State|PA'],'resample': True}},'workflow_generator': {'type': 'residential_hpxml','args': {'build_existing_model': {'simulation_control_timestep': '60','simulation_control_run_period_begin_month': '1','simulation_control_run_period_begin_day_of_month': '1','simulation_control_run_period_end_month': '12','simulation_control_run_period_end_day_of_month': '31','simulation_control_run_period_calendar_year': '2007'},'emissions': [{'scenario_name': 'LRMER_MidCase_15','type': 'CO2e','elec_folder': 'data/emissions/cambium/2022/LRMER_MidCase_15'}],'utility_bills': [{'scenario_name': 'Bills'}],'simulation_output_report': {'timeseries_frequency': 'hourly','include_timeseries_total_consumptions': True,'include_timeseries_fuel_consumptions': True,'include_timeseries_end_use_consumptions': True,'include_timeseries_emissions': True,'include_timeseries_emission_fuels': True,'include_timeseries_emission_end_uses': True,'include_timeseries_hot_water_uses': True,'include_timeseries_total_loads': True,'include_timeseries_component_loads': True,'include_timeseries_unmet_hours': True,'include_timeseries_zone_temperatures': True,'include_timeseries_airflows': True,'include_timeseries_weather': True,'include_timeseries_resilience': True},'reporting_measures': [{'measure_dir_name': 'QOIReport'}],'server_directory_cleanup': {'retain_in_idf': False,'retain_schedules_csv': False}}},'baseline': {'n_buildings_represented': '5742828'}},'.\project_PAbaseline\PAbaseline_baseline.yml')]
+
+In file: C:\Users\ianca\anaconda3\envs\build_env\Lib\site-packages\yamale\yamale.py, module validate line: 45 
+Local Variables: 'schema':<yamale.schema.schema.Schema object at 0x0000021624B68B90>
+'data':[({'schema_version': '0.3','os_version': '3.8.0','os_sha': 'f953b6fcaf','buildstock_directory': '../','project_directory': 'project_PAbaseline','output_directory': 'PAbaseline_baseline','weather_files_url': 'https://data.nrel.gov/system/files/156/Buildstock_TMY3_FIPS-1678817889.zip','sampler': {'type': 'residential_quota_downselect','args': {'n_datapoints': '10','logic': ['State|PA'],'resample': True}},'workflow_generator': {'type': 'residential_hpxml','args': {'build_existing_model': {'simulation_control_timestep': '60','simulation_control_run_period_begin_month': '1','simulation_control_run_period_begin_day_of_month': '1','simulation_control_run_period_end_month': '12','simulation_control_run_period_end_day_of_month': '31','simulation_control_run_period_calendar_year': '2007'},'emissions': [{'scenario_name': 'LRMER_MidCase_15','type': 'CO2e','elec_folder': 'data/emissions/cambium/2022/LRMER_MidCase_15'}],'utility_bills': [{'scenario_name': 'Bills'}],'simulation_output_report': {'timeseries_frequency': 'hourly','include_timeseries_total_consumptions': True,'include_timeseries_fuel_consumptions': True,'include_timeseries_end_use_consumptions': True,'include_timeseries_emissions': True,'include_timeseries_emission_fuels': True,'include_timeseries_emission_end_uses': True,'include_timeseries_hot_water_uses': True,'include_timeseries_total_loads': True,'include_timeseries_component_loads': True,'include_timeseries_unmet_hours': True,'include_timeseries_zone_temperatures': True,'include_timeseries_airflows': True,'include_timeseries_weather': True,'include_timeseries_resilience': True},'reporting_measures': [{'measure_dir_name': 'QOIReport'}],'server_directory_cleanup': {'retain_in_idf': False,'retain_schedules_csv': False}}},'baseline': {'n_buildings_represented': '5742828'}},'.\project_PAbaseline\PAbaseline_baseline.yml')]
+'strict':True
+'_raise_error':True
+'results':[Error validating data '.\project_PAbaseline\PAbaseline_baseline.yml' with schema 'C:\Users\ianca\buildstockbatch\buildstockbatch\schemas\v0.3.yaml'
+	output_directory: 'PAbaseline_baseline' is not a regex match.]
+'is_valid':False
+'d':{'schema_version': '0.3','os_version': '3.8.0','os_sha': 'f953b6fcaf','buildstock_directory': '../','project_directory': 'project_PAbaseline','output_directory': 'PAbaseline_baseline','weather_files_url': 'https://data.nrel.gov/system/files/156/Buildstock_TMY3_FIPS-1678817889.zip','sampler': {'type': 'residential_quota_downselect','args': {'n_datapoints': '10','logic': ['State|PA'],'resample': True}},'workflow_generator': {'type': 'residential_hpxml','args': {'build_existing_model': {'simulation_control_timestep': '60','simulation_control_run_period_begin_month': '1','simulation_control_run_period_begin_day_of_month': '1','simulation_control_run_period_end_month': '12','simulation_control_run_period_end_day_of_month': '31','simulation_control_run_period_calendar_year': '2007'},'emissions': [{'scenario_name': 'LRMER_MidCase_15','type': 'CO2e','elec_folder': 'data/emissions/cambium/2022/LRMER_MidCase_15'}],'utility_bills': [{'scenario_name': 'Bills'}],'simulation_output_report': {'timeseries_frequency': 'hourly','include_timeseries_total_consumptions': True,'include_timeseries_fuel_consumptions': True,'include_timeseries_end_use_consumptions': True,'include_timeseries_emissions': True,'include_timeseries_emission_fuels': True,'include_timeseries_emission_end_uses': True,'include_timeseries_hot_water_uses': True,'include_timeseries_total_loads': True,'include_timeseries_component_loads': True,'include_timeseries_unmet_hours': True,'include_timeseries_zone_temperatures': True,'include_timeseries_airflows': True,'include_timeseries_weather': True,'include_timeseries_resilience': True},'reporting_measures': [{'measure_dir_name': 'QOIReport'}],'server_directory_cleanup': {'retain_in_idf': False,'retain_schedules_csv': False}}},'baseline': {'n_buildings_represented': '5742828'}}
+'path':'.\project_PAbaseline\PAbaseline_baseline.yml'
+'result':Error validating data '.\project_PAbaseline\PAbaseline_baseline.yml' with schema 'C:\Users\ianca\buildstockbatch\buildstockbatch\schemas\v0.3.yaml'
+	output_directory: 'PAbaseline_baseline' is not a regex match.
